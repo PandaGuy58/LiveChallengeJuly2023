@@ -28,6 +28,8 @@ public class PlaneMovement : MonoBehaviour
         Inputs();
         CalculateDirection();
         CalculateRotation();
+
+       // Vector3 vector = new Vector3()
     }
 
     void Inputs()
@@ -92,8 +94,8 @@ public class PlaneMovement : MonoBehaviour
         }
         else                // calculate new rotation
         {
-            transform.Rotate(new Vector3(10 * Input.GetAxis("Mouse Y") * Time.deltaTime, 0, 0));
-            transform.Rotate(new Vector3(0, 0, 10 * Input.GetAxis("Mouse X") * Time.deltaTime));
+            transform.Rotate(new Vector3(-10 * Input.GetAxis("Mouse Y") * Time.deltaTime, 0, 0));
+            transform.Rotate(new Vector3(0, 0, -10 * Input.GetAxis("Mouse X") * Time.deltaTime));
         }
     }
 }
